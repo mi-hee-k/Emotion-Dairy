@@ -1,0 +1,22 @@
+const EmotionItem = ({
+  emotion_id,
+  emotion_img,
+  emotion_des,
+  onClick,
+  isSelected,
+}) => {
+  return (
+    <div
+      onClick={() => onClick(emotion_id)}
+      className={[
+        "EmotionItem",
+        isSelected ? `EmotionItem_on_${emotion_id}` : `emotionItem_off`,
+      ].join(" ")}
+    >
+      <img src={emotion_img} />
+      <span>{emotion_des}</span>
+    </div>
+  );
+};
+
+export default EmotionItem;
