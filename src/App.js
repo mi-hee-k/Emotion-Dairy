@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import New from "./pages/New";
-import DiaryList from "./components/DiaryList";
+// import DiaryList from "./components/DiaryList";
 
 const reducer = (state, action) => {
   let newState = [];

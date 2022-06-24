@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import MyButton from "./MyButton";
 
@@ -17,8 +18,8 @@ const DiaryItem = ({ id, emotion, content, date }) => {
       <div
         onClick={goDetail}
         className={[
-          "emotion_img_wrapper",
-          `emotion_img_wrapper_${emotion}`,
+          `emotion_img_wrapper,
+          emotion_img_wrapper_${emotion}`,
         ].join(" ")}
       >
         <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} />
@@ -34,4 +35,4 @@ const DiaryItem = ({ id, emotion, content, date }) => {
   );
 };
 
-export default DiaryItem;
+export default React.memo(DiaryItem);
