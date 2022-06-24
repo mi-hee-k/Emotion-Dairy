@@ -4,7 +4,7 @@ import MyButton from "./MyButton";
 const DiaryItem = ({ id, emotion, content, date }) => {
   const navigate = useNavigate();
   const goDetail = () => {
-    navigate(`/diary${id}`);
+    navigate(`/diary/${id}`);
   };
   const goEdit = () => {
     navigate(`/edit/${id}`);

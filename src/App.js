@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useReducer, useRef } from "react";
 
 import Home from "./pages/Home";
-import Dairy from "./pages/Dairy";
+import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import New from "./pages/New";
 
@@ -71,7 +71,7 @@ const dummyData = [
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
-  const dataId = useRef(0);
+  const dataId = useRef(6);
 
   // CREATE
   const onCreate = (date, content, emotion) => {
@@ -114,7 +114,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />
               <Route path="/edit/:id" element={<Edit />} />
-              <Route path="/dairy/:id" element={<Dairy />} />
+              <Route path="/diary/:id" element={<Diary />} />
             </Routes>
           </div>
         </BrowserRouter>

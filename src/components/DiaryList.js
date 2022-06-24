@@ -30,7 +30,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
   );
 };
 
-const DairyList = ({ dairyList }) => {
+const DiaryList = ({ diaryList }) => {
   const navigate = useNavigate();
   const [sortType, setSortType] = useState("latest");
   const [filter, setFilter] = useState("all");
@@ -51,7 +51,7 @@ const DairyList = ({ dairyList }) => {
         return parseInt(a.date) - parseInt(b.date);
       }
     };
-    const copyList = JSON.parse(JSON.stringify(dairyList));
+    const copyList = JSON.parse(JSON.stringify(diaryList));
     const filteredList =
       filter === "all" ? copyList : copyList.filter((it) => filterCallBack(it));
 
@@ -92,8 +92,8 @@ const DairyList = ({ dairyList }) => {
   );
 };
 
-DairyList.defaultProps = {
-  dairyList: [],
+DiaryList.defaultProps = {
+  diaryList: [],
 };
 
-export default DairyList;
+export default DiaryList;
